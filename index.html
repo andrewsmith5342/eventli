@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventli | Where professional events become communities</title>
+  <meta name="description" content="Eventli is the UK home for professional events. Organisers sell tickets and grow a real community. Attendees find events worth their evening, see who's going and meet before they arrive. Launching April 2027.">
+  <meta name="theme-color" content="#2459E8">
+  <meta property="og:title" content="Eventli | Where professional events become communities">
+  <meta property="og:description" content="Sell tickets, grow your community and keep people connected. Free events are always free. Launching April 2027.">
+  <meta property="og:type" content="website">
+  <!-- TODO: <meta property="og:image" content="https://YOUR-DOMAIN/images/og.png"> (1200x630) -->
+  <!-- TODO: <link rel="icon" href="images/favicon.svg"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Reusable SVG symbols: icons and Eli. Use with <svg><use href="#id"/></svg> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M4 8h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z M10 8v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8.6 19z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21c0-4 3-6 7-6s7 2 7 6 M17 11a3 3 0 1 0 0-6 M22 21c0-3-2-5-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V9 M10 19V5 M16 19v-7 M22 19H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z M21 21l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="logo-mark" viewBox="0 0 34 22"><path d="M3 9 L9 17 L15 5 C17 1 22 2 20 7 C18 12 12 13 16 16 C20 19 27 15 31 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- Eli: redrawn in code. TODO: replace with the original Eli artwork. -->
+    <symbol id="eli-body" viewBox="0 0 160 200">
+      <g fill="none" stroke="#2b7bff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M58 150 L48 186 L30 190"/><path d="M98 150 L110 184 L130 188"/><path d="M42 92 C 24 98, 18 114, 26 126"/>
+      </g>
+      <path d="M50 20 H68 A12 12 0 0 0 92 20 H110 Q122 20 122 32 V146 Q122 158 110 158 H50 Q38 158 38 146 V32 Q38 20 50 20 Z" fill="#2b7bff"/>
+      <ellipse cx="64" cy="72" rx="13" ry="8" transform="rotate(-18 64 72)" fill="#fff"/>
+      <ellipse cx="98" cy="66" rx="13" ry="8" transform="rotate(-18 98 66)" fill="#fff"/>
+      <g fill="none" stroke="#2b7bff" stroke-width="4" stroke-linecap="round"><path d="M56 76 C 60 68, 70 66, 72 70"/><path d="M90 70 C 94 62, 104 60, 106 64"/></g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="logo" aria-label="Eventli home">
+      <!-- TODO: replace with the official Eventli logo SVG -->
+      <svg width="34" height="22" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="logo__text">eventli</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#founding">Founding organisers</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav__actions">
+      <a href="#waitlist" class="btn btn--ghost nav__waitlist">Join the waitlist</a>
+      <a href="#apply" class="btn btn--primary"><span class="label-short">Apply</span><span class="label-long">Apply as an organiser</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ======================= HERO ======================= -->
+<section id="top" class="container hero split split--hero">
+  <svg class="swirl swirl--blue wide-only" style="left:-210px; top:420px" width="260" height="200" viewBox="0 0 260 200" aria-hidden="true"><path stroke-width="20" d="M20 30 C 20 120, 120 150, 140 90 C 155 45, 90 40, 100 100 C 110 160, 200 175, 240 150"/><path stroke-width="20" d="M215 125 L 242 150 L 208 162"/></svg>
+
+  <div class="stack hero__copy">
+    <div class="badge"><span class="badge__pill">Launching April 2027</span><span class="badge__extra">Your network, but in real life</span></div>
+    <h1 class="hero__title">Where professional events become
+      <span class="hero__highlight">communities.<svg class="hero__underline" viewBox="0 0 420 40" preserveAspectRatio="none" aria-hidden="true"><path d="M6 26 C 90 8, 200 6, 300 14 C 360 19, 300 32, 230 30 C 190 29, 260 18, 414 16" fill="none" stroke="#ddb0f7" stroke-width="7" stroke-linecap="round"/></svg></span>
+    </h1>
+    <p class="hero__lead">Eventli is the UK home for networking nights, workshops, talks and career events. Organisers sell tickets and grow a real community. Attendees find events worth their evening, see who is going, and meet before they arrive.</p>
+    <div class="hero__ctas">
+      <a href="#apply" class="btn btn--primary btn--lg">I run events <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#waitlist" class="btn btn--ghost btn--lg">I go to events</a>
+    </div>
+    <ul class="ticks">
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Free events always free</li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Free to join as an attendee</li>
+      <li><svg width="16" height="16" aria-hidden="true"><use href="#i-check"/></svg>Built with 20+ UK organisers</li>
+    </ul>
+  </div>
+
+  <div class="hero__visual">
+    <svg class="swirl swirl--lilac desktop-only" style="right:-120px; top:-30px" width="320" height="300" viewBox="0 0 320 300" aria-hidden="true"><path stroke-width="22" d="M300 40 C 200 10, 120 60, 160 120 C 190 165, 250 130, 220 90 C 190 50, 90 90, 110 170 C 125 230, 210 260, 300 250"/></svg>
+
+    <!-- Example event card. TODO: swap for a real founding organiser's event once live. -->
+    <article class="event-card" aria-label="Example event card">
+      <div class="event-card__media">
+        <svg viewBox="0 0 360 170" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 120 C 60 40, 140 160, 210 80 S 330 40, 380 110" fill="none" stroke="#2b7bff" stroke-width="16" stroke-linecap="round" opacity=".35"/></svg>
+        <span class="event-card__tag">Example event</span>
+      </div>
+      <div class="event-card__body">
+        <span class="event-card__type">Networking night</span>
+        <h3 class="event-card__title">Fintech After Hours: Early Careers Edition</h3>
+        <div class="event-card__meta">Thu 21 May, 6:30pm<br>Shoreditch, London</div>
+        <div class="event-card__row">
+          <div class="avatars">
+            <span class="avatar" style="background:#2459e8"></span><span class="avatar" style="background:#ddb0f7"></span><span class="avatar" style="background:#0b1220"></span><span class="avatar" style="background:#9db8ff"></span>
+            <span class="avatars__count">+38 going</span>
+          </div>
+          <span class="event-card__price">£8</span>
+        </div>
+        <span class="event-card__cta">Get ticket</span>
+      </div>
+    </article>
+
+    <div class="chip chip--invite float">
+      <span class="wa-icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-chat"/></svg></span>
+      <span><strong>Event chat invite</strong><br><span class="chip__muted">Join the group before the night?</span></span>
+    </div>
+    <div class="chip chip--sold float--slow"><strong>Ticket sold</strong><br><span class="chip__muted">Payout on its way via Stripe</span></div>
+
+    <div class="hero__eli eli">
+      <svg width="120" height="150" viewBox="0 0 160 200" role="img" aria-label="Eli, the Eventli ticket mascot, waving">
+        <use href="#eli-body"/>
+        <g fill="none" stroke-linecap="round"><path d="M118 80 C 136 70, 144 52, 140 34" stroke="#2b7bff" stroke-width="12"/><path d="M128 18 l6 -10 M138 26 l10 -4 M134 10 l2 -8" stroke="#2459e8" stroke-width="4"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EVENT TYPES ======================= -->
+<section class="marquee" aria-label="Event types on Eventli">
+  <div class="marquee__track">
+    <span class="pill">Networking nights</span><span class="pill pill--blue">Career workshops</span><span class="pill">Founder meetups</span><span class="pill pill--lilac">Industry mixers</span><span class="pill">Panels and talks</span><span class="pill pill--ink">Conferences</span><span class="pill">Pitch nights</span><span class="pill pill--sky">Skill-building sessions</span>
+    <!-- duplicate set for a seamless loop, hidden from screen readers -->
+    <span class="pill" aria-hidden="true">Networking nights</span><span class="pill pill--blue" aria-hidden="true">Career workshops</span><span class="pill" aria-hidden="true">Founder meetups</span><span class="pill pill--lilac" aria-hidden="true">Industry mixers</span><span class="pill" aria-hidden="true">Panels and talks</span><span class="pill pill--ink" aria-hidden="true">Conferences</span><span class="pill" aria-hidden="true">Pitch nights</span><span class="pill pill--sky" aria-hidden="true">Skill-building sessions</span>
+  </div>
+</section>
+
+<!-- ======================= PROBLEM ======================= -->
+<section class="section">
+  <div class="container split split--half">
+    <div class="stack problem__copy">
+      <span class="eyebrow">The problem</span>
+      <h2 class="h2">Running a community shouldn't need five different apps.</h2>
+      <p class="lead">Tickets in one place, sign-ups in a form, the group chat somewhere else, and a spreadsheet to work out who actually came. Every event starts from zero, and the people you brought together drift apart the next morning.</p>
+      <p class="lead" style="color:var(--ink); font-weight:700">Eventli puts it all in one place, so every event builds on the last.</p>
+    </div>
+    <div class="stack problem__stack">
+      <div class="tool">Ticketing site for paid tickets <span class="tag tag--warn">High fees</span></div>
+      <div class="tool">Google Forms for sign-ups <span class="tag tag--warn">Manual</span></div>
+      <div class="tool">WhatsApp group, added by hand <span class="tag tag--warn">Messy</span></div>
+      <div class="tool">Spreadsheet of who turned up <span class="tag tag--warn">Lost</span></div>
+      <div class="problem__arrow" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><path d="M20 4 C 30 12, 10 22, 20 32 M12 26 l8 8 8 -8" fill="none" stroke="#2b7bff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="tool tool--eventli">One Eventli page <span class="tag tag--white">All of it</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= AUDIENCE SWITCH ======================= -->
+<section id="how" class="section section--soft section--clip">
+  <svg class="swirl swirl--lilac desktop-only" style="left:-90px; top:40px" width="240" height="240" viewBox="0 0 240 240" aria-hidden="true"><path stroke-width="20" d="M220 30 C 120 0, 40 60, 90 120 C 130 170, 190 110, 150 80 C 100 45, 20 120, 60 210"/></svg>
+  <div class="container" style="position:relative">
+    <div class="stack center audience__head">
+      <span class="eyebrow">Built for both sides of the room</span>
+      <h2 class="h2">Pick your side. We've built for both.</h2>
+      <div class="segmented" role="group" aria-label="Choose audience">
+        <button type="button" class="segmented__btn" data-audience-btn="org" aria-pressed="true">I run events</button>
+        <button type="button" class="segmented__btn" data-audience-btn="att" aria-pressed="false">I go to events</button>
+      </div>
+    </div>
+
+    <!-- Organisers -->
+    <div data-audience="org">
+      <div class="split split--feat audience__body">
+        <div class="stack features">
+          <h3 class="h3">Everything your community needs, in one place.</h3>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-ticket"/></svg></span><div><strong class="feature__title">Sell tickets in minutes</strong><span class="feature__body">Paid or free, one link to share anywhere. Free events are always free, with no ticket cap.</span></div></div>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-chat"/></svg></span><div><strong class="feature__title">The event chat, sorted</strong><span class="feature__body">Every attendee gets an invite to your event's WhatsApp group. No more adding people one by one.</span></div></div>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-people"/></svg></span><div><strong class="feature__title">Know who's coming</strong><span class="feature__body">See names and photos before the doors open, so you can plan intros and seating.</span></div></div>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-chart"/></svg></span><div><strong class="feature__title">Get paid without chasing</strong><span class="feature__body">Payouts go through Stripe, straight to your account. See which channels sell and who keeps coming back.</span></div></div>
+        </div>
+        <div class="mock">
+          <div class="dashboard">
+            <div class="dashboard__head">Your organiser dashboard <span class="tag tag--example">Example data</span></div>
+            <div class="stats">
+              <div class="stat"><div class="stat__label">Tickets sold</div><div class="stat__value">86</div></div>
+              <div class="stat"><div class="stat__label">In event chat</div><div class="stat__value">61</div></div>
+              <div class="stat stat--lilac"><div class="stat__label">Came back again</div><div class="stat__value">42%</div></div>
+            </div>
+            <div>
+              <div class="mini-title">Sales by channel</div>
+              <div class="bar-row"><span class="bar-row__name">LinkedIn</span><span class="bar"><span class="bar__fill" style="width:72%; background:#2459e8"></span></span><span class="bar-row__pct">72%</span></div>
+              <div class="bar-row"><span class="bar-row__name">WhatsApp</span><span class="bar"><span class="bar__fill" style="width:19%; background:#7fa4ff"></span></span><span class="bar-row__pct">19%</span></div>
+              <div class="bar-row"><span class="bar-row__name">Email</span><span class="bar"><span class="bar__fill" style="width:9%; background:#c2b0e8"></span></span><span class="bar-row__pct">9%</span></div>
+            </div>
+            <div>
+              <div class="mini-title">Who's coming</div>
+              <div class="people"><span class="person-pill">Priya, Analyst</span><span class="person-pill">Jordan, Founder</span><span class="person-pill">Sam, Engineer</span><span class="person-pill person-pill--more">+83 more</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stack steps">
+        <h3 class="h3">Running an event on Eventli</h3>
+        <ol class="steps__list">
+          <li class="step"><span class="step__num">1</span><strong class="step__title">Create your event</strong><span class="step__body">Add details, ticket types and pricing. Most events are live in under ten minutes.</span></li>
+          <li class="step"><span class="step__num">2</span><strong class="step__title">Share one link</strong><span class="step__body">Post it on LinkedIn, WhatsApp or email. Watch sales come in by channel, live.</span></li>
+          <li class="step"><span class="step__num">3</span><strong class="step__title">Get paid and grow</strong><span class="step__body">Money lands via Stripe, attendees stay connected, and your next event starts with a crowd.</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Attendees -->
+    <div data-audience="att" hidden>
+      <div class="split split--feat audience__body">
+        <div class="stack features">
+          <h3 class="h3">Better rooms. Better people. Less awkward.</h3>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-search"/></svg></span><div><strong class="feature__title">Events worth your evening</strong><span class="feature__body">Networking nights, workshops, talks and founder meetups run by real professional communities.</span></div></div>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-people"/></svg></span><div><strong class="feature__title">See who's going</strong><span class="feature__body">Check who's registered before you go and plan who you want to meet. No more walking in cold.</span></div></div>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-chat"/></svg></span><div><strong class="feature__title">Meet before you arrive</strong><span class="feature__body">Get an invite to the event's WhatsApp chat. Join if you want to, break the ice early.</span></div></div>
+          <div class="feature"><span class="feature__icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-star"/></svg></span><div><strong class="feature__title">Free, always</strong><span class="feature__body">Sign in with LinkedIn in one tap. You only pay when you book a paid ticket.</span></div></div>
+        </div>
+        <div class="mock">
+          <div class="chat">
+            <div class="chat__head"><span class="wa-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-chat"/></svg></span><div><div class="chat__group">Fintech After Hours event chat</div><div class="chat__sub">38 members, example chat</div></div></div>
+            <div class="bubble bubble--them"><span class="bubble__name">Amara</span>Anyone else coming solo? First one of these for me</div>
+            <div class="bubble bubble--them"><span class="bubble__name bubble__name--lilac">Leo</span>Same! Grab a coffee nearby at 6 before it starts?</div>
+            <div class="bubble bubble--me">I'm in. Saw you're both in product too</div>
+            <div class="bubble bubble--them"><span class="bubble__name">Amara</span>Perfect. See you there</div>
+            <div class="chat__note">Walk in already knowing a few faces.</div>
+          </div>
+        </div>
+      </div>
+      <div class="stack steps">
+        <h3 class="h3">From scroll to show-up</h3>
+        <ol class="steps__list">
+          <li class="step"><span class="step__num">1</span><strong class="step__title">Find your room</strong><span class="step__body">Browse professional events by type and location across the UK.</span></li>
+          <li class="step"><span class="step__num">2</span><strong class="step__title">Book in seconds</strong><span class="step__body">Sign in with LinkedIn, grab your ticket and get your confirmation straight away.</span></li>
+          <li class="step"><span class="step__num">3</span><strong class="step__title">Show up connected</strong><span class="step__body">Join the event chat, see who's going and walk in already knowing a few faces.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRICING ======================= -->
+<section id="pricing" class="section">
+  <div class="container" style="position:relative">
+    <svg class="swirl swirl--blue wide-only" style="right:-110px; top:-60px" width="230" height="230" viewBox="0 0 230 230" aria-hidden="true"><path stroke-width="20" d="M200 20 C 120 30, 120 120, 170 120 C 210 120, 200 60, 150 70 C 80 85, 60 170, 20 210"/></svg>
+    <div class="stack pricing__head">
+      <span class="eyebrow">Pricing</span>
+      <h2 class="h2">Simple pricing. No surprises.</h2>
+      <p class="lead lead--italic">What you see is the all-in cost: our fee plus Stripe's card processing. Attendees never pay to use Eventli.</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan plan--free">
+        <span class="plan__label">Free events</span>
+        <span class="plan__price">Uncapped</span>
+        <span class="plan__strong">£0. No allowance, no per-event charge. Ever.</span>
+        <span class="plan__note">Run as many free meetups as you like. Your community should grow before you ever sell a ticket.</span>
+      </div>
+      <div class="plan plan--paid">
+        <span class="plan__label">Paid tickets</span>
+        <span class="plan__price">3% + 10p</span>
+        <span class="plan__strong">per ticket, + Stripe's 1.5% + 20p</span>
+        <span class="plan__note">All-in on a £20 ticket: £1.20. No monthly fee. Always cheaper than Eventbrite.</span>
+      </div>
+      <!-- Plus launches at Phase 2. Remove this card (and the Plus calculator option and FAQ) if Plus should not be public yet. -->
+      <div class="plan plan--plus">
+        <span class="plan__flag">Coming after launch</span>
+        <span class="plan__label">Eventli Plus</span>
+        <span class="plan__price">£29<small>/mo</small></span>
+        <span class="plan__strong">or £249/year. 0% platform fee on every ticket.</span>
+        <span class="plan__note">Stripe processing still applies. Plus full financials, automated reminders, scheduled broadcasts and one-click duplicate events.</span>
+      </div>
+    </div>
+
+    <div class="stack calc-head">
+      <h3>See what you'd keep. Type in your ticket price.</h3>
+      <p>Compare the all-in cost against Eventbrite, Luma and Ticket Tailor.</p>
+    </div>
+
+    <div class="calc">
+      <div class="calc__inputs">
+        <div class="calc__field">
+          <label for="calc-price" class="calc__label">Ticket price</label>
+          <div class="money-input"><span class="money-input__sign" aria-hidden="true">£</span><input id="calc-price" type="number" inputmode="decimal" min="0" step="0.5" value="15"></div>
+        </div>
+        <div class="calc__field">
+          <label for="calc-tickets" class="calc__label">Tickets sold: <span id="calc-tickets-out">100</span></label>
+          <input id="calc-tickets" class="range" type="range" min="10" max="1000" step="10" value="100">
+        </div>
+        <fieldset class="plan-picker">
+          <legend>Your Eventli plan</legend>
+          <button type="button" class="plan-btn" data-plan="standard" aria-pressed="true"><strong>Standard</strong><span>3% + 10p per paid ticket</span></button>
+          <button type="button" class="plan-btn" data-plan="founding" aria-pressed="false"><strong>Founding organiser</strong><span>0% Eventli fee for your first 6 months</span></button>
+          <button type="button" class="plan-btn" data-plan="plus" aria-pressed="false"><strong>Eventli Plus (coming after launch)</strong><span>£29/mo, 0% platform fee</span></button>
+        </fieldset>
+        <div class="calc__headline" aria-live="polite">
+          <div class="calc__headline-label" id="calc-headline-label">You keep vs Eventbrite</div>
+          <div class="calc__headline-value" id="calc-headline-value">£0.00</div>
+        </div>
+      </div>
+
+      <div class="calc__results">
+        <div class="calc__results-head"><strong id="calc-title">Total fees</strong><span>Lower is better</span></div>
+        <ul class="calc__rows" id="calc-rows"></ul>
+        <p class="calc__verdict" id="calc-verdict" aria-live="polite"></p>
+        <p class="calc__small">All-in cost: platform fee plus card processing. Assumes the organiser absorbs fees, one ticket per order and UK cards. Eventbrite: 6.95% + 59p per ticket, processing included. Luma free plan: 5% + Stripe. Luma Plus: about £47/month + Stripe. Ticket Tailor pay-as-you-go: 60p + VAT per ticket + Stripe. Stripe UK cards: 1.5% + 20p. Eventli Plus counts one month (£29). Competitor rates checked October 2026 and may change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOUNDER ======================= -->
+<section class="section section--lilac">
+  <svg class="swirl swirl--blue" style="right:-60px; bottom:-40px" width="300" height="220" viewBox="0 0 300 220" aria-hidden="true"><path stroke-width="22" d="M20 200 C 40 100, 140 60, 170 120 C 190 160, 130 170, 140 110 C 150 50, 240 30, 290 60"/></svg>
+  <div class="container split split--founder" style="position:relative">
+    <div class="founder__photo-wrap">
+      <!-- TODO: replace placeholder with <img class="founder__photo" src="images/kyle.jpg" alt="Kyle Tracey, co-founder of Eventli"> -->
+      <div class="placeholder placeholder--lilac founder__photo">Photo: Kyle Tracey<small>Founder headshot</small></div>
+      <span class="founder__name">Kyle Tracey, Co-founder</span>
+    </div>
+    <div class="stack founder__copy">
+      <span class="eyebrow">Why we're building this</span>
+      <blockquote class="founder__quote">"As an apprentice, I went looking for professional communities and found Google Forms, random links and reply-if-you-can emails. There was no real home for them."</blockquote>
+      <p>Then I spoke to more than 20 organisers. They felt the same: too many tools, too much manual work, and no way to build something that lasts. So we built Eventli: one place to run events, grow a network and keep people connected after the night ends.</p>
+      <div class="chips"><span>20+ organisers interviewed</span><span>Team of four</span><span>Built in the UK</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOUNDING ORGANISERS ======================= -->
+<section id="founding" class="section section--navy">
+  <svg class="swirl swirl--blue" style="left:-80px; bottom:-60px; opacity:.5" width="420" height="260" viewBox="0 0 420 260" aria-hidden="true"><path stroke-width="24" d="M10 240 C 60 120, 180 100, 200 170 C 215 220, 140 220, 160 150 C 180 80, 320 60, 410 110"/></svg>
+  <div class="container split split--founding" style="position:relative">
+    <div class="stack founding__copy">
+      <span class="founding__pill">Founding organisers, 20 spots</span>
+      <h2 class="founding__title">Zero Eventli fees for six months. Seriously.</h2>
+      <p class="founding__lead">We're looking for 20 organisers who run real professional communities to build Eventli with us before we open to everyone in April 2027.</p>
+      <div class="perks">
+        <div class="perk"><strong>0% Eventli fees</strong><span>For your first six months. Only Stripe's card fee applies.</span></div>
+        <div class="perk"><strong>Price locked for 24 months</strong><span>After that, your rate stays put for two years.</span></div>
+        <div class="perk"><strong>Hands-on setup</strong><span>We'll set up your first event with you.</span></div>
+        <div class="perk"><strong>A say in what we build</strong><span>A direct line to the team. Your feedback shapes the roadmap.</span></div>
+      </div>
+    </div>
+    <div id="apply" class="apply">
+      <div class="apply__card">
+        <h3 class="h3">Apply to be a founding organiser</h3>
+        <p>Tell us about your community. It takes about two minutes.</p>
+        <a href="#TODO-founding-organiser-form" class="apply__btn">Apply for a spot</a>
+        <a href="#TODO-booking-link" class="apply__alt">Or book a 15-minute walkthrough</a>
+        <span class="apply__small">We review every application within 48 hours.</span>
+      </div>
+      <div class="apply__eli eli">
+        <svg width="110" height="110" viewBox="0 0 200 200" role="img" aria-label="Eli, the Eventli ticket mascot, holding a megaphone">
+          <svg x="0" y="0" width="160" height="200" viewBox="0 0 160 200"><use href="#eli-body"/></svg>
+          <path d="M118 92 C 132 90, 140 84, 146 76" fill="none" stroke="#2b7bff" stroke-width="12" stroke-linecap="round"/>
+          <path d="M138 70 L170 50 L176 96 L142 84 Z" fill="#a78bfa"/>
+          <ellipse cx="174" cy="73" rx="7" ry="23" fill="#ddb0f7"/>
+          <path d="M186 50 l8 -8 M190 74 h10 M186 98 l8 8" fill="none" stroke="#ddb0f7" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TEAM ======================= -->
+<section class="section">
+  <div class="container">
+    <div class="stack team__head">
+      <span class="eyebrow">The team</span>
+      <h2 class="h2">Real people. No corporate theatre.</h2>
+    </div>
+    <!-- TODO: replace each placeholder div with <img class="member__photo" src="images/NAME.jpg" alt="NAME"> -->
+    <ul class="team">
+      <li class="member"><div class="placeholder placeholder--blue member__photo">Photo: Kyle</div><strong class="member__name">Kyle Tracey</strong><span class="member__role">Co-founder, Managing Director</span><span class="member__bio">Sets the direction and stays close to the communities we build for.</span><a class="member__link" href="#TODO-kyle-linkedin">LinkedIn<span class="sr-only">, Kyle Tracey</span></a></li>
+      <li class="member"><div class="placeholder placeholder--lilac member__photo">Photo: Will</div><strong class="member__name">Will Jones</strong><span class="member__role">Co-founder, CTO</span><span class="member__bio">Builds the product and the tech that keeps people connected.</span><a class="member__link" href="#TODO-will-linkedin">LinkedIn<span class="sr-only">, Will Jones</span></a></li>
+      <li class="member"><div class="placeholder placeholder--blue member__photo">Photo: Finlay</div><strong class="member__name">Finlay Thornell</strong><span class="member__role">Chief Marketing Officer</span><span class="member__bio">Tells Eventli's story and gets it in front of the right organisers.</span><a class="member__link" href="#TODO-finlay-linkedin">LinkedIn<span class="sr-only">, Finlay Thornell</span></a></li>
+      <li class="member"><div class="placeholder placeholder--lilac member__photo">Photo: Andrew</div><strong class="member__name">Andrew Smith</strong><span class="member__role">Head of Engineering</span><span class="member__bio">Runs engineering so the roadmap actually ships.</span><a class="member__link" href="#TODO-andrew-linkedin">LinkedIn<span class="sr-only">, Andrew Smith</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq" class="section section--soft section--clip">
+  <svg class="swirl swirl--lilac desktop-only" style="right:-70px; top:60px" width="220" height="220" viewBox="0 0 220 220" aria-hidden="true"><path stroke-width="20" d="M200 200 C 120 210, 60 150, 110 110 C 150 80, 170 140, 120 140 C 60 140, 40 60, 120 20"/></svg>
+  <div class="container faq" style="position:relative">
+    <div class="stack center faq__head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">Good questions. Straight answers.</h2>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item" open><summary class="faq__q">How much does Eventli cost?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Free events are free and uncapped, with no allowance and no per-event charge. Paid tickets are 3% + 10p per ticket plus Stripe's card processing of 1.5% + 20p, so £1.20 all-in on a £20 ticket. There's no monthly fee. Attendees never pay to use Eventli.</p></details>
+      <details class="faq__item"><summary class="faq__q">What is Eventli Plus?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Plus is an optional plan for organisers who sell a lot of tickets: £29 a month or £249 a year for a 0% platform fee on every ticket (Stripe processing still applies). It also includes a full financials page, automated reminders, scheduled broadcast messages and one-click duplicate events. Plus arrives after launch.</p></details>
+      <details class="faq__item"><summary class="faq__q">What do founding organisers get?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Zero Eventli fees for your first six months (Stripe's card fee still applies), then your pricing locked for 24 months, hands-on setup and a direct say in what we build. There are 20 spots.</p></details>
+      <details class="faq__item"><summary class="faq__q">When does Eventli launch?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">April 2027. Founding organisers start working with us before then, and everyone on the waitlist hears first.</p></details>
+      <details class="faq__item"><summary class="faq__q">How does the WhatsApp group work?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">When someone books a ticket, they get an invite to that event's WhatsApp group. It's their choice to join. Nobody is added without saying yes.</p></details>
+      <details class="faq__item"><summary class="faq__q">Can people see who else is going?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Yes. Attendees can see the name and photo of others who have registered, so networking starts before the night.</p></details>
+      <details class="faq__item"><summary class="faq__q">Do attendees need an account?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Yes. It's free and you sign in with LinkedIn. You need to be 16 or over, and 16 to 17 year olds need a parent or guardian's consent.</p></details>
+      <details class="faq__item"><summary class="faq__q">How do payouts work?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Payments run through Stripe and go straight to the organiser's own Stripe account. Organisers set their own refund policy and handle refunds.</p></details>
+      <details class="faq__item"><summary class="faq__q">Who is Eventli for?<span class="faq__icon"><svg width="14" height="14" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><p class="faq__a">Anyone running or attending professional events in the UK: networking nights, workshops, talks, panels, founder meetups and career events, from 20 people to 500.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FINAL CTA ======================= -->
+<section id="waitlist" class="section">
+  <div class="container">
+    <h2 class="final__title">Ready to make it happen?</h2>
+    <div class="final__grid">
+      <div class="final__card final__card--org">
+        <svg class="swirl swirl--white" style="right:-40px; top:-30px; opacity:.35" width="200" height="160" viewBox="0 0 200 160" aria-hidden="true"><path stroke-width="16" d="M10 140 C 40 40, 140 40, 120 100 C 105 140, 60 110, 100 70 C 130 40, 180 40, 195 20"/></svg>
+        <span class="final__kicker">For organisers</span>
+        <h3>Run your next event on Eventli.</h3>
+        <p>Apply now for one of 20 founding spots and pay zero Eventli fees for six months.</p>
+        <a href="#apply" class="btn btn--white btn--md">Apply as a founding organiser</a>
+      </div>
+      <div class="final__card final__card--att">
+        <svg class="swirl swirl--lilac" style="right:-40px; bottom:-40px" width="200" height="160" viewBox="0 0 200 160" aria-hidden="true"><path stroke-width="16" d="M10 20 C 60 120, 150 130, 130 80 C 115 40, 70 70, 100 110 C 125 145, 180 140, 195 120"/></svg>
+        <span class="final__kicker">For professionals</span>
+        <h3>Find rooms worth walking into.</h3>
+        <p>Join the waitlist to be first through the door when Eventli launches. Free, always.</p>
+        <a href="#TODO-waitlist-form" class="btn btn--primary btn--md">Join the waitlist</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo logo--white"><svg width="34" height="22" aria-hidden="true"><use href="#logo-mark"/></svg><span class="logo__text">eventli</span></span>
+      <span>Where professional events become communities.</span>
+    </div>
+    <div class="footer__info">
+      <a href="mailto:info@eventli.co.uk">info@eventli.co.uk</a>
+      <span>Evently Ltd, trading as Eventli</span>
+      <span>Company no. 16226736. Registered in England.</span>
+      <!-- TODO: add Privacy policy and Terms links before launch -->
+    </div>
+  </div>
+</footer>
+
+<script src="js/pricing.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

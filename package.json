@@ -1,0 +1,12 @@
+{
+  "name": "eventli-static",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Eventli landing page",
+  "scripts": {
+    "dev": "serve . -l 8002"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
